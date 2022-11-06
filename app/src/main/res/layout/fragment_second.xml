@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="12dp"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".SecondFragment">
+
+    <ImageView
+        android:id="@+id/picture2fragment"
+        android:layout_width="260dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_secondscreen" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="You"
+        android:id="@+id/Fname"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_sharp_favorite_24"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="me"
+        android:id="@+id/Sname"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Your Score"
+        android:id="@+id/score"
+        android:textColor="@color/red"
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="162dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_baseline_favorite_border_24"
+        android:gravity="center"
+        android:text="100%"
+        android:id="@+id/percent"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgain"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="@color/purple_500"
+        android:padding="10dp"
+        android:text="@string/try_again"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        app:cornerRadius="20dp"/>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

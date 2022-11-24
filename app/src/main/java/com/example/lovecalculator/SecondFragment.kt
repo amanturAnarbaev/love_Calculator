@@ -10,7 +10,7 @@ import com.example.lovecalculator.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
     lateinit var binding: FragmentSecondBinding
-    private lateinit var navGraphArgs:SecondFragmentArgs
+    private lateinit var navGraphArgs: SecondFragmentArgs
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,18 +23,22 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-      navGraphArgs=SecondFragmentArgs.fromBundle(it)
+            navGraphArgs = SecondFragmentArgs.fromBundle(it)
         }
-        binding.score.text=navGraphArgs.score
+        binding.score.text = navGraphArgs.score
 
-        binding.Fname.text=navGraphArgs.fname
-        binding.Sname.text=navGraphArgs.sname
-        binding.percent.text=navGraphArgs.percentage
+        binding.Fname.text = navGraphArgs.fname
+        binding.Sname.text = navGraphArgs.sname
+        binding.percent.text = navGraphArgs.percentage
+
+
 
         binding.btnAgain.setOnClickListener {
             findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToFirstFragment())
         }
     }
+
+    
 
 
 }

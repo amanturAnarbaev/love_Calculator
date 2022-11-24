@@ -5,11 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 
-//.url("https://love-calculator.p.rapidapi.com/getPercentage?sname=Alice&fname=John")
-//.get()
-//.addHeader("X-RapidAPI-Key", "d376098a99msh49b18e1f93f20cbp1d5062jsn869e6323a2f5")
-//.addHeader("X-RapidAPI-Host", "love-calculator.p.rapidapi.com")
-//.build()
+
 
 
 interface CalculatorApi {

@@ -16,7 +16,7 @@ import retrofit2.Response
 
 class FirstFragment : Fragment() {
     lateinit var binding: FragmentFirstBinding
-    private val viewModel:MainActivityViewModel by viewModels()
+    private val viewModel: MainActivityViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -32,53 +32,41 @@ class FirstFragment : Fragment() {
 
         binding.btnCalculste.setOnClickListener {
             getRequest()
-
+            saveData()
 
         }
 
     }
-    @SuppressLint("FragmentLiveDataObserve")
+
     private fun getRequest() {
 
         binding.btnCalculste.setOnClickListener {
             viewModel.getRequest(binding.edEText1.text.toString(), binding.edEText2.text.toString())
-                .observe(this@FirstFragment) {
+                .observe(viewLifecycleOwner) {
 
-                    findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(it.firstName,it.secondName,
-                    it.result,it.percentage))
+                    findNavController().navigate(
+                        FirstFragmentDirections.actionFirstFragmentToSecondFragment(
+                            it.firstName , it.secondName,
+                            it.result, it.percentage
+                        )
+                    )
 
                 }
 
         }
     }
 
+    private fun saveData() {
+        val calculateModel = CalculateModel(
+            firstName ="me",
+            secondName = "you",
+            percentage = "100",
+            result = "ok"
+        )
 
- }
+    }
 
-//    private fun getRequest() {
-//        App.api.getPercentage(binding.edEText1.text.toString(),binding.edEText2.text.toString()).enqueue(
-//            object : Callback<CalculateModel>{
-//                override fun onResponse(
-//                    call: Call<CalculateModel>,
-//                    response: Response<CalculateModel>
-//                ) {
-//                    findNavController().navigate(FirstFragmentDirections.actionFirstFragmentToSecondFragment(response.body()?.firstName.toString(),
-//                    response.body()?.secondName.toString(),response.body()?.result.toString(),response.body()?.percentage.toString()))
-//
-//
-//                }
-//
-//                override fun onFailure(call: Call<CalculateModel>, t: Throwable) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            }
-//        )
-//
-//
-//    }
-//
-//
-//}
+
+}
 
 

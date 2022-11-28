@@ -6,14 +6,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.lovecalculator.databinding.ItemHistoryBinding
 
-class AdaapterHistory(private val list: ArrayList<HistoryModel>) :
-    RecyclerView.Adapter<AdaapterHistory.HistoryViewHolder>() {
+class AdaapterHistory(private val list: ArrayList<CalculateModel>) :
+   Adapter<AdaapterHistory.HistoryViewHolder>() {
     inner class HistoryViewHolder(private val binding: ItemHistoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(historyModel: HistoryModel) {
+        fun onBind(historyModel: CalculateModel) {
             binding.firstNHistory.text = historyModel.firstName
             binding.secondNHistory.text = historyModel.secondName
-            binding.percentHistory.text = historyModel.perecenyage.toString()
+            binding.percentHistory.text = historyModel.percentage
         }
 
     }

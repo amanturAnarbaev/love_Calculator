@@ -23,23 +23,23 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val list = ArrayList<HistoryModel>()
-        val adapter = AdaapterHistory(list)
 
-        binding.recycleHistory.adapter = adapter
 
-//        viewModel.getRequest(binding.edEText1.text.toString(), binding.edEText2.text.toString())
-//            .observe(viewLifecycleOwner) {
-//                val historyModel: HistoryModel
-//                findNavController().navigate(
-//                    FirstFragmentDirections.actionFirstFragmentToSecondFragment(
-//                        it.firstName, it.secondName,
-//                        it.result, it.percentage
-//                    )
-//                )
-//
-//            }
+        App.appDataBase.getDao().getAll().observe(viewLifecycleOwner) {
+            val list = ArrayList<CalculateModel>()
+            val adapter = AdaapterHistory(list)
+            binding.recycleHistory.adapter = adapter
+
+
+
+
+
+
+        }
     }
+
+
+
 
 
 }

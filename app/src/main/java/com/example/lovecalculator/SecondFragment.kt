@@ -36,6 +36,9 @@ class SecondFragment : Fragment() {
         binding.btnAgain.setOnClickListener {
             findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToFirstFragment())
         }
+        binding.imageHome.setOnClickListener {
+            findNavController().navigate(SecondFragmentDirections.actionSecondFragmentToHistoryFragment())
+        }
     }
 
     

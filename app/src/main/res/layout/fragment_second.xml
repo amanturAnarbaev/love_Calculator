@@ -80,6 +80,13 @@
         android:textSize="20sp"
         android:layout_gravity="center"
         app:cornerRadius="20dp"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageHome"
+        android:src="@drawable/ic_sharp_favorite_24"
+        android:layout_margin="4dp"/>
+
 
 
 
